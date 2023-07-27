@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <img src="./img/logo.svg" alt="" class="logo">
+    <div class="container">
+        <div class="container-left">
+            <div class="bill-container">
+                <h3 class="container-title">Bill</h3>
+                <img src="./img/icon-dollar.svg" alt="" class="icon-dollar">
+                <input type="number" name="" id="input-bill" placeholder="0">
+            </div>
+            <div class="tip-container">
+                <h3 class="container-title">Select Tip %</h3>
+                <div class="tip-boxes">
+                        <button class="tip-box" value="5">5%</button>
+                        <button class="tip-box" value="10">10%</button>
+                        <button class="tip-box" value="15">15%</button>
+                        <button class="tip-box" value="25">25%</button>
+                        <button class="tip-box" value="50">50%</button>
+                        <input class="tip-box input-box" placeholder="Custom" id="input-tip"></input>
+                </div>
+            </div>
+            <div class="people-container">
+                <h3 class="container-title">Number of people <span class="fail-text none">Can´t be zero</span></h3>
+                <img src="./img/icon-person.svg" alt="" class="icon-person">
+                <input type="number" name="" id="input-people" placeholder="0">
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="right-top">
+                <div class="right-top-box">
+                    <div class="box-left">
+                        <p class="text-top">Tip amount</p>
+                        <p class="text-bottom">/ person</p>
+                    </div>
+                    <div class="box-right">
+                        <h2 class="amount" id="tip-amount">$0.00</h2>
+                    </div>
+                </div>
+                <div class="right-top-box">
+                    <div class="box-left">
+                        <p class="text-top">Total</p>
+                        <p class="text-bottom">/ person</p>
+                    </div>
+                    <div class="box-right">
+                        <h2 class="amount" id="total-person-amount">$0.00</h2>
+                    </div>
+                </div>
+            </div>
+            <button class="reset-btn">RESET</button>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&family=Space+Mono:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Space Mono', monospace;
+    box-sizing: border-box;
+}
+
+:root{
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+body{
+    flex-direction: column;
+    gap: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--light-grayish-cyan);
+}
+
+input{
+    text-align: right;
+    font-size: 24px;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--very-light-grayish-cyan);
+    width: 100%;
+    color: var(--very-dark-cyan);
+    padding: 0 10px;
+    border: 1px solid transparent;
+}
+
+input::placeholder{
+    color: var(--grayish-cyan);
+}
+
+input:focus{
+    border: 1px solid var(--strong-cyan);
+}
+
+input:active{
+    border: 1px solid var(--strong-cyan);
+}
+
+.container{
+    display: flex;
+    width: 720px;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 15px;
+
+}
+
+.container-left{
+    width: 50%;
+    margin-right: 30px;
+}
+
+.tip-boxes{
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.tip-boxes-top,
+.tip-boxes-bottom{
+    display: flex;
+    gap: 15px;
+}
+
+.tip-box{
+    width: 94px;
+    padding: 2px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--very-dark-cyan);
+    color: var(--very-light-grayish-cyan);
+    transition: all .3s;
+}
+
+.tip-box.active{
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+button.tip-box:hover{
+    cursor: pointer;
+    background-color: #9FE8DF;
+    color: var(--very-dark-cyan);
+}
+
+.tip-box.input-box{
+    text-align: center;
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--very-dark-cyan);
+    font-size: 20px;
+}
+
+.tip-box.input-box:focus{
+    text-align: right;
+}
+
+.tip-box.input-box::placeholder{
+    color: var(--dark-grayish-cyan);
+}
+
+.bill-container,
+.people-container{
+    position: relative;
+}
+
+.bill-container{
+    margin-bottom: 30px;
+}
+
+.people-container{
+    margin-top: 25px;
+}
+
+.container-title{
+    color: var(--dark-grayish-cyan);
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-dollar,
+.icon-person{
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+}
+
+.container-right{
+    width: 50%;
+    background-color: var(--very-dark-cyan);
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.right-top-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.text-top{
+    color: var(--very-light-grayish-cyan);
+    font-size: 14px;
+}
+
+.text-bottom{
+    color: var(--light-grayish-cyan);
+    font-size: 12px;
+}
+
+.amount{
+    font-size: 35px;
+    color: var(--strong-cyan);
+}
+
+.reset-btn{
+    opacity: .3;
+    background-color: var(--strong-cyan);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: var(--very-dark-cyan);
+    transition: all .3s;
+}
+
+.reset-btn:hover{
+    cursor: pointer;
+    background-color: #9FE8DF;
+    opacity: 1;
+}
+
+.fail-text{
+    color: red;
+}
+
+.fail-input{
+    border: 2px solid red;
+}
+
+.none{
+    display: none;
+}
+
+.no-opacity{
+    opacity: 1 !important;
+}
+
+@media (max-width:375px) {
+    body{
+        align-items: flex-start;
+        gap: 30px;
+        justify-content: start;
+        margin-top: 40px;
+        height: auto;
+    }
+    .container{
+        width: 100%;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .container-left,
+    .container-right{
+        width: 100%;
+    }
+    .tip-box{
+        width: 47%;
+    }
+    img.logo{
+        margin: 0 auto;
+    }
+}
